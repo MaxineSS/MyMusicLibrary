@@ -70,17 +70,17 @@ namespace MyMusicLibrary.View
             {
                 parent = VisualTreeHelper.GetParent(parent);
             }
-            //var test = (parent as UserControl).GetValue();
+
             ContentDialog1 ct = new ContentDialog1();
             var result = await ct.ShowAsync();
 
-            //if create button on dialog box is created then textbox content will go in text
+
             if (result == ContentDialogResult.Primary)
             {
                 var text = ct.Text;
 
             }
-            // if cancel button is clicked then textbox text will become null and dialog box window will be hidden
+
             else
             {
                 ct.Text = " ";
@@ -88,7 +88,7 @@ namespace MyMusicLibrary.View
             }
             p = ct.Text;
 
-            // to add playlist with the name typed in textbox in list of playlists
+
             if (p != " ")
             {
                 PlayList UP = new PlayList(p);
@@ -102,9 +102,10 @@ namespace MyMusicLibrary.View
             var flyoutMenu1 = new MenuFlyoutItem();
             flyoutMenu1.Text = "Create Playlist";
             flyoutMenu1.Click += MenuAddPlaylist_Click;
-            var seperator = new MenuFlyoutSeparator();
+            MenuFlyoutSeparator seperator = new MenuFlyoutSeparator();
             var flyoutMenu2 = new MenuFlyoutItem();
             flyoutMenu2.Text = "Add To >";
+            flyoutMenu2.Click += FlyoutMenu2_Click;
 
             var flyout = new MenuFlyout();
             flyout.Items.Add(flyoutMenu1);
@@ -120,6 +121,11 @@ namespace MyMusicLibrary.View
             }
             var button = (Button)sender;
             button.Flyout = flyout;
+        }
+
+        private void FlyoutMenu2_Click(object sender, RoutedEventArgs e)
+        {
+            throw new NotImplementedException();
         }
 
         private void MenuFlyoutItem_Click(object sender, RoutedEventArgs e)

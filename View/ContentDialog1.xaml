@@ -8,11 +8,15 @@
     mc:Ignorable="d"
     Title="Creat Playlist"
     PrimaryButtonText="Create"
-    SecondaryButtonText="Delete"
-    PrimaryButtonClick="ContentDialog_PrimaryButtonClick"
-    SecondaryButtonClick="ContentDialog_SecondaryButtonClick">
+    PrimaryButtonClick="ContentDialog_PrimaryButtonClick">
 
-    <TextBox Text="{Binding ElementName=ContentDialog, Path=Text, Mode=TwoWay}" TextChanged="TextBox_TextChanged" RenderTransformOrigin="0.5,0.5" Margin="0,0,17,0" UseLayoutRounding="False" d:LayoutRounding="Auto" >
+    <TextBox Text="{Binding Path=Text, Mode=TwoWay}" 
+             Name="PlaylistNameBox"
+             TextChanged="TextBox_TextChanged" 
+             RenderTransformOrigin="0.5,0.5" 
+             Margin="0,0,17,0" 
+             UseLayoutRounding="False" 
+             d:LayoutRounding="Auto" >
 
     </TextBox>
 </ContentDialog>

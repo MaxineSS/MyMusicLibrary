@@ -38,20 +38,18 @@ namespace MyMusicLibrary
 
         private void MenuItemsListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            MenuItemsListView menuItemsListViewItem = sender as MenuItemsListView;
+            ListView menuItemsListViewItem = sender as ListView;
             if (menuItemsListViewItem != null)
             {
-                switch (menuItemsListViewItem.Name)
+                ListViewItem SelectedItem = MenuItemsListView.SelectedItem as ListViewItem;
+                switch (SelectedItem.Name)
                 {
                     case "Find":
                         MyFrame.Navigate(typeof(AllSongsPage));
                         break;
 
                     case "Add":
-                        MyFrame.Navigate(typeof(PlayListPage));
-                        break;
-
-                    default:
+                        MyFrame.Navigate(typeof(PlaylistDetailPage));
                         break;
                 }
                 MySplitView.IsPaneOpen = false;
