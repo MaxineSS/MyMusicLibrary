@@ -1,0 +1,295 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{9FF13B20-08DD-44BB-98BE-921EC74EF0C9}</ProjectGuid>
+    <OutputType>AppContainerExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MyMusicLibrary</RootNamespace>
+    <AssemblyName>MyMusicLibrary</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
+    <TargetPlatformVersion Condition=" '$(TargetPlatformVersion)' == '' ">10.0.18362.0</TargetPlatformVersion>
+    <TargetPlatformMinVersion>10.0.17763.0</TargetPlatformMinVersion>
+    <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WindowsXamlEnableOverview>true</WindowsXamlEnableOverview>
+    <AppxPackageSigningEnabled>false</AppxPackageSigningEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\ARM\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM'">
+    <OutputPath>bin\ARM\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\ARM64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>ARM64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM64'">
+    <OutputPath>bin\ARM64\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>ARM64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\PlayList.cs" />
+    <Compile Include="DataModel\Song.cs" />
+    <Compile Include="ViewModel\PlayListViewModel.cs" />
+    <Compile Include="View\AllSongsPage.xaml.cs">
+      <DependentUpon>AllSongsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ContentDialog1.xaml.cs">
+      <DependentUpon>ContentDialog1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\PlayListPage.xaml.cs">
+      <DependentUpon>PlayListPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModel\SongViewModel.cs" />
+    <Compile Include="View\MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="DataModel\MenuItemsListView.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppxManifest Include="Package.appxmanifest">
+      <SubType>Designer</SubType>
+    </AppxManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\Audio\Acoustic\A Day To Remember.wav" />
+    <Content Include="Assets\Audio\Acoustic\Acoustic Breeze.wav" />
+    <Content Include="Assets\Audio\Acoustic\Happiness.wav" />
+    <Content Include="Assets\Audio\Acoustic\Smile.wav" />
+    <Content Include="Assets\Audio\Acoustic\Sunny.wav" />
+    <Content Include="Assets\Audio\Acoustic\Tenderness.wav" />
+    <Content Include="Assets\Audio\Acoustic\Ukulele.wav" />
+    <Content Include="Assets\Audio\Cinematic\Adventure.wav" />
+    <Content Include="Assets\Audio\Cinematic\Better Days.wav" />
+    <Content Include="Assets\Audio\Cinematic\Memories.wav" />
+    <Content Include="Assets\Audio\Cinematic\Once Again.wav" />
+    <Content Include="Assets\Audio\Cinematic\Piano Moment.wav" />
+    <Content Include="Assets\Audio\Cinematic\Sad Day.wav" />
+    <Content Include="Assets\Audio\Cinematic\Slowmotion.wav" />
+    <Content Include="Assets\Audio\Cinematic\Tomorrow.wav" />
+    <Content Include="Assets\Audio\Groove\Badass.wav" />
+    <Content Include="Assets\Audio\Groove\Downtown.wav" />
+    <Content Include="Assets\Audio\Groove\FunnySong.wav" />
+    <Content Include="Assets\Audio\Groove\RetroSoul.wav" />
+    <Content Include="Assets\Audio\Jazz\AllThat.wav" />
+    <Content Include="Assets\Audio\Jazz\HipJazz.wav" />
+    <Content Include="Assets\Audio\Jazz\JazzComedy.wav" />
+    <Content Include="Assets\Audio\Jazz\JazzyFrenchy.wav" />
+    <Content Include="Assets\Audio\Jazz\Love.wav" />
+    <Content Include="Assets\Audio\Jazz\Romantic.wav" />
+    <Content Include="Assets\Audio\Jazz\TheElevator.wav" />
+    <Content Include="Assets\Audio\Jazz\TheJazzPiano.wav" />
+    <Content Include="Assets\Audio\Jazz\TheLounge.wav" />
+    <Content Include="Assets\Audio\Others\Brazil Samba.wav" />
+    <Content Include="Assets\Audio\Others\Country Boy.wav" />
+    <Content Include="Assets\Audio\Others\Creepy.wav" />
+    <Content Include="Assets\Audio\Others\Little Planet.wav" />
+    <Content Include="Assets\Audio\Others\Psychedelic.wav" />
+    <Content Include="Assets\Audio\Others\Relaxing.wav" />
+    <Content Include="Assets\Audio\Others\Sci-fi.wav" />
+    <Content Include="Assets\Audio\Others\Together.wav" />
+    <Content Include="Assets\Audio\Relax\acousticguitar.wav" />
+    <Content Include="Assets\Audio\Relax\harp.wav" />
+    <Content Include="Assets\Audio\Relax\piano.wav" />
+    <Content Include="Assets\Audio\Relax\violin.wav" />
+    <Content Include="Assets\Audio\Upbeat\electric.wav" />
+    <Content Include="Assets\CreatePlayListImage.png" />
+    <Content Include="Assets\Images\Acoustic\A Day To Remember.png" />
+    <Content Include="Assets\Images\Acoustic\Acoustic Breeze.png" />
+    <Content Include="Assets\Images\Acoustic\Happiness.png" />
+    <Content Include="Assets\Images\Acoustic\Relaxing.png" />
+    <Content Include="Assets\Images\Acoustic\Smile.png" />
+    <Content Include="Assets\Images\Acoustic\Sunny.png" />
+    <Content Include="Assets\Images\Acoustic\Tenderness.png" />
+    <Content Include="Assets\Images\Acoustic\Ukulele.png" />
+    <Content Include="Assets\Images\Cinematic\Adventure.png" />
+    <Content Include="Assets\Images\Cinematic\Better Days.png" />
+    <Content Include="Assets\Images\Cinematic\Memories.png" />
+    <Content Include="Assets\Images\Cinematic\Once Again.png" />
+    <Content Include="Assets\Images\Cinematic\Piano Moment.png" />
+    <Content Include="Assets\Images\Cinematic\Sad Day.png" />
+    <Content Include="Assets\Images\Cinematic\Slowmotion.png" />
+    <Content Include="Assets\Images\Cinematic\Tomorrow.png" />
+    <Content Include="Assets\Images\Groove\Badass.png" />
+    <Content Include="Assets\Images\Groove\Downtown.png" />
+    <Content Include="Assets\Images\Groove\FunnySong.png" />
+    <Content Include="Assets\Images\Groove\RetroSoul.png" />
+    <Content Include="Assets\Images\Jazz\AllThat.png" />
+    <Content Include="Assets\Images\Jazz\HipJazz.png" />
+    <Content Include="Assets\Images\Jazz\JazzComedy.png" />
+    <Content Include="Assets\Images\Jazz\JazzyFrenchy.png" />
+    <Content Include="Assets\Images\Jazz\Love.png" />
+    <Content Include="Assets\Images\Jazz\Romantic.png" />
+    <Content Include="Assets\Images\Jazz\TheElevator.png" />
+    <Content Include="Assets\Images\Jazz\TheJazzPiano.png" />
+    <Content Include="Assets\Images\Jazz\TheLounge.png" />
+    <Content Include="Assets\Images\Others\Brazil Samba.png" />
+    <Content Include="Assets\Images\Others\Country Boy.png" />
+    <Content Include="Assets\Images\Others\Creepy.png" />
+    <Content Include="Assets\Images\Others\Little Planet.png" />
+    <Content Include="Assets\Images\Others\Psychedelic.png" />
+    <Content Include="Assets\Images\Others\Relaxing.png" />
+    <Content Include="Assets\Images\Others\Sci-fi.png" />
+    <Content Include="Assets\Images\Others\Together.png" />
+    <Content Include="Assets\Images\Relax\acousticguitar.png" />
+    <Content Include="Assets\Images\Relax\cat.png" />
+    <Content Include="Assets\Images\Relax\Cow.png" />
+    <Content Include="Assets\Images\Relax\harp.png" />
+    <Content Include="Assets\Images\Relax\piano.png" />
+    <Content Include="Assets\Images\Relax\violin.png" />
+    <Content Include="Assets\Images\Upbeat\electric.png" />
+    <Content Include="Assets\Images\Upbeat\Spring.png" />
+    <Content Include="Assets\PackageAppXManifest\1240x1240.png" />
+    <Content Include="Assets\PackageAppXManifest\1240x600.png" />
+    <Content Include="Assets\PackageAppXManifest\24x24-large.png" />
+    <Content Include="Assets\PackageAppXManifest\24x24.png" />
+    <Content Include="Assets\PackageAppXManifest\300x300.png" />
+    <Content Include="Assets\PackageAppXManifest\310x310.png" />
+    <Content Include="Assets\PackageAppXManifest\50x50-large.png" />
+    <Content Include="Assets\PackageAppXManifest\50x50.png" />
+    <Content Include="Assets\PackageAppXManifest\620x300.png" />
+    <Content Include="Assets\PackageAppXManifest\71x71-large.png" />
+    <Content Include="Assets\PackageAppXManifest\71x71.png" />
+    <Content Include="Assets\PackageAppXManifest\88x88-large.png" />
+    <Content Include="Assets\PackageAppXManifest\88x88.png" />
+    <Content Include="Properties\Default.rd.xml" />
+    <Content Include="Assets\LockScreenLogo.scale-200.png" />
+    <Content Include="Assets\SplashScreen.scale-200.png" />
+    <Content Include="Assets\Square150x150Logo.scale-200.png" />
+    <Content Include="Assets\Square44x44Logo.scale-200.png" />
+    <Content Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png" />
+    <Content Include="Assets\StoreLogo.png" />
+    <Content Include="Assets\Wide310x150Logo.scale-200.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="View\AllSongsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ContentDialog1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\PlayListPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\MainPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
+      <Version>6.2.9</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
+    <VisualStudioVersion>14.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
