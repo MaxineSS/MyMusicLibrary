@@ -31,6 +31,9 @@ namespace MyMusicLibrary.View
         public ObservableCollection<PlayList> playLists;
         string p;
 
+
+
+
         public AllSongsPage()
         {
 
@@ -41,11 +44,28 @@ namespace MyMusicLibrary.View
             SongViewModel.GetAllSong(songs);
 
         }
+
+        //private MediaState state = MediaState.Stopped;
+
+
+        //private void MyMediaElement_MediaEnded(object sender, RoutedEventArgs e)
+        //{
+        //    state = MediaState.Stopped;
+        //}
+
+        //public enum MediaState
+        //{
+        //    Stopped,
+        //    Playing,
+        //    Paused,
+        //}
         private void SoundListView_ItemClick(object sender, ItemClickEventArgs e)
         {
-            var sound = (Song)e.ClickedItem;
-            MyMediaElement.Source = new Uri(this.BaseUri, sound.AudioFile);
+            Song song = (Song)e.ClickedItem;
+            MyMediaElement.Source = new Uri(this.BaseUri, song.AudioFile);
+
         }
+  
 
 
         private void ListViewSwipeContainer_PointerEntered(object sender, PointerRoutedEventArgs e)
@@ -105,7 +125,8 @@ namespace MyMusicLibrary.View
             MenuFlyoutSeparator seperator = new MenuFlyoutSeparator();
             var flyoutMenu2 = new MenuFlyoutItem();
             flyoutMenu2.Text = "Add To >";
-            flyoutMenu2.Click += FlyoutMenu2_Click;
+
+
 
             var flyout = new MenuFlyout();
             flyout.Items.Add(flyoutMenu1);
@@ -123,10 +144,7 @@ namespace MyMusicLibrary.View
             button.Flyout = flyout;
         }
 
-        private void FlyoutMenu2_Click(object sender, RoutedEventArgs e)
-        {
-            throw new NotImplementedException();
-        }
+
 
         private void MenuFlyoutItem_Click(object sender, RoutedEventArgs e)
         {
@@ -139,6 +157,8 @@ namespace MyMusicLibrary.View
             }
 
         }
+
+
 
     }
 }

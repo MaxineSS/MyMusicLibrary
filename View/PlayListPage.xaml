@@ -36,9 +36,11 @@
                     />
         </Grid>
         <StackPanel Margin="0,10,0,0" Grid.Row="1">
+            
             <ListView x:Name="PlayListsListView"
                       ItemsSource="{x:Bind playlists}"
                       IsItemClickEnabled="True"
+                      SelectionMode="Single"
                       ItemClick="PlayListsListView_ItemClick"
                       >
                 <ListView.ItemTemplate>
@@ -52,17 +54,20 @@
                                             <ColumnDefinition Width="*"/>
                                             <ColumnDefinition Width="100"/>
                                         </Grid.ColumnDefinitions>
+                                        <StackPanel Orientation="Horizontal">
                                         <TextBlock Grid.Column="0" x:Name="textbox1" Text="{x:Bind Name}"/>
+                                        <TextBlock Grid.Column="0" x:Name="Textbox2" Text="{x:Bind Description}"/>
+                                    </StackPanel>
                                     </Grid>
                                 </SwipeControl>
                             </Grid>
                         </UserControl>
                     </DataTemplate>
                 </ListView.ItemTemplate>
-
+                
             </ListView>
             
         </StackPanel>
-
+        <Frame Name="PlaylistsFrame"/>
     </Grid>
 </Page>

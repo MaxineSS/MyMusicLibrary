@@ -7,13 +7,17 @@ using System.Runtime.InteropServices.WindowsRuntime;
 using System.ServiceModel.Channels;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.Storage;
+using Windows.Storage.Pickers;
 using Windows.Storage.Pickers.Provider;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
 using Windows.UI.Xaml.Data;
+using Windows.UI.Xaml.Documents;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
+using Windows.UI.Xaml.Media.Imaging;
 using Windows.UI.Xaml.Navigation;
 using static System.Net.Mime.MediaTypeNames;
 
@@ -36,6 +40,11 @@ namespace MyMusicLibrary.View
             get { return binding.Text; }
             set { binding.Text = value; }
         }
+        public string Text2
+        {
+            get { return binding.Text2; }
+            set { binding.Text2 = value; }
+        }
         private void ContentDialog_PrimaryButtonClick(ContentDialog sender, ContentDialogButtonClickEventArgs args)
         {
 
@@ -48,8 +57,11 @@ namespace MyMusicLibrary.View
 
         class DialogBinding
         {
-            public String Text { get; set; }
+            public string Text { get; set; }
+            public string Text2 { get; set; }
         }
-    }
 
-}
+    }
+ }
+
+

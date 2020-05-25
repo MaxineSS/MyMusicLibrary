@@ -10,13 +10,31 @@
     PrimaryButtonText="Create"
     PrimaryButtonClick="ContentDialog_PrimaryButtonClick">
 
-    <TextBox Text="{Binding Path=Text, Mode=TwoWay}" 
-             Name="PlaylistNameBox"
+    <StackPanel>
+
+        <Image x:Name="CoverImage" 
+               Width="130" Height="130"
+               Source="/Assets/CreatePlayListImage.png"
+               AllowDrop="True"/>
+
+        <TextBox Text="{Binding Path=Text, Mode=TwoWay}"
+             Header="Name"
+             Name="PlaylistNameBox" PlaceholderText="My Playlist #7"
              TextChanged="TextBox_TextChanged" 
              RenderTransformOrigin="0.5,0.5" 
              Margin="0,0,17,0" 
              UseLayoutRounding="False" 
              d:LayoutRounding="Auto" >
-
     </TextBox>
+    <TextBox Text="{Binding Path=Text2, Mode=TwoWay}"
+             Header="Description" PlaceholderText="Give your playlist a catchy description"
+             Name="PlaylistDescription"
+             TextChanged="TextBox_TextChanged" 
+             RenderTransformOrigin="0.5,0.5" 
+             Margin="0,0,17,0" 
+             UseLayoutRounding="False" 
+             d:LayoutRounding="Auto">
+        
+    </TextBox>
+    </StackPanel>
 </ContentDialog>

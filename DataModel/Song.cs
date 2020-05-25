@@ -13,6 +13,7 @@ namespace MyMusicLibrary.DataModel
         Cinematic,
         Groove,
         Jazz,
+        Others,
         Relax,
         Upbeat,
     }
@@ -25,8 +26,7 @@ namespace MyMusicLibrary.DataModel
         public SongCategory Category { get; set; }
         public string AudioFile { get; set; }
         public string ImageFile { get; set; }
-        public string Description { get; set; }
-        public TimeSpan TimeSpan { get; }
+
         public ICommand Command { get; set; }
 
 
@@ -36,6 +36,7 @@ namespace MyMusicLibrary.DataModel
           
             Name = name;
             Category = category;
+ 
             AudioFile = $"/Assets/Audio/{category}/{name}.wav";
             ImageFile = $"/Assets/Images/{category}/{name}.png";
 

@@ -1,4 +1,5 @@
 ﻿using MyMusicLibrary.DataModel;
+using MyMusicLibrary.View;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -75,7 +76,6 @@ namespace MyMusicLibrary.ViewModel
             allPlayLists.Remove(objectToDelete);
             return;
         }
-
 
 
     }

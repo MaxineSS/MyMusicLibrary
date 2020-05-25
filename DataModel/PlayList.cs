@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
@@ -12,9 +13,11 @@ namespace MyMusicLibrary.DataModel
 
         public List<Song> SongList;
 
-        string CoverImagePath;
+        public string CoverImagePath;
         public ICommand Command { get; set; }
-        public string Name { get; set;  }
+        public string Name { get; set; }
+
+        public string Description { get; set; }
 
         public PlayList()
         {
@@ -33,6 +36,7 @@ namespace MyMusicLibrary.DataModel
             SongList = new List<Song>();
             CoverImagePath = coverimagepath;
         }
+
 
         public string GetName()
         {

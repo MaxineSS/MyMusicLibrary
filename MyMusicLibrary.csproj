@@ -121,7 +121,7 @@
     </Compile>
     <Compile Include="DataModel\PlayList.cs" />
     <Compile Include="DataModel\Song.cs" />
-    <Compile Include="ViewModel\PlayListViewModel.cs" />
+    <Compile Include="View\ViewModel\PlayListViewModel.cs" />
     <Compile Include="View\AllSongsPage.xaml.cs">
       <DependentUpon>AllSongsPage.xaml</DependentUpon>
     </Compile>
@@ -131,12 +131,15 @@
     <Compile Include="View\PlayListPage.xaml.cs">
       <DependentUpon>PlayListPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ViewModel\SongViewModel.cs" />
+    <Compile Include="View\ViewModel\SongViewModel.cs" />
     <Compile Include="View\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="DataModel\MenuItemsListView.cs" />
+    <Compile Include="View\SubSongsPage.xaml.cs">
+      <DependentUpon>SubSongsPage.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -244,6 +247,10 @@
     <Content Include="Assets\PackageAppXManifest\71x71.png" />
     <Content Include="Assets\PackageAppXManifest\88x88-large.png" />
     <Content Include="Assets\PackageAppXManifest\88x88.png" />
+    <Content Include="Assets\Square150x150Logo.scale-100.png" />
+    <Content Include="Assets\Square150x150Logo.scale-125.png" />
+    <Content Include="Assets\Square150x150Logo.scale-150.png" />
+    <Content Include="Assets\Square150x150Logo.scale-400.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
@@ -273,6 +280,10 @@
     <Page Include="View\MainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\SubSongsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>

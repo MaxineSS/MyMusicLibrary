@@ -27,7 +27,9 @@ namespace MyMusicLibrary
         string p;
 
         public ObservableCollection<PlayList> playlists;
-      
+
+        public object PlaylistFrame { get; private set; }
+
         public PlaylistDetailPage()
         {
             this.InitializeComponent();
@@ -81,8 +83,13 @@ namespace MyMusicLibrary
 
         public void PlayListsListView_ItemClick(object sender, ItemClickEventArgs e)
         {
-            var playlist = (PlayList)e.ClickedItem;
-            this.Frame.Navigate(typeof(PlaylistDetailPage), playlist);
+        
+            PlayList hi;
+            hi = (PlayList)e.ClickedItem;
+            this.Frame.Navigate(typeof(SubSongsPage), hi);
         }
+
+
+
     }
 }
