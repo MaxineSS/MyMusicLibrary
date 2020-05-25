@@ -65,6 +65,7 @@
                         SelectedItem= "{Binding SelectedItem}" SelectedValuePath="Name" 
                         HorizontalAlignment="Left"  >
                 <ListView.ItemTemplate>
+
                     <DataTemplate x:DataType="data:Song">
                         <UserControl PointerEntered="ListViewSwipeContainer_PointerEntered" PointerExited="ListViewSwipeContainer_PointerExited">
                             <Grid>
