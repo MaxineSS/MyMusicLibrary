@@ -32,6 +32,15 @@
                     <TextBlock Name="CategoryTextBlock2" Text="Song" FontSize="15" Margin="70,80,0,0" Width="200" VerticalAlignment="Center" FontWeight="SemiBold"/>
                     <TextBlock Name="CategoryTextBlock3" Text="Genre" FontSize="15" Margin="20,80,0,0" Width="200" VerticalAlignment="Center" FontWeight="SemiBold"/>
                 </StackPanel>
+                <Image Name="imagebox" Stretch="Fill" VerticalAlignment="Top" HorizontalAlignment="Left" Height="150" Width="150"  />
+
+                <Button Grid.Column="0" Name="UploadFile"
+                                                Margin="36,163,0,0"
+                                                Content="Upload File"
+                                                Click="UploadFile_Click"
+                                                Width="90"
+                                                Height="44" VerticalAlignment="Top"
+                                                />
 
                 <Button Grid.Column="1" x:Name="DeletePlayList"
                     Content="Delete"

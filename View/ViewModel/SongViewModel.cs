@@ -39,7 +39,7 @@ namespace MyMusicLibrary.ViewModel
             songs.Add(new Song("Ukulele", SongCategory.Acoustic));
             songs.Add(new Song("Adventure", SongCategory.Cinematic));
             songs.Add(new Song("Better Days", SongCategory.Cinematic));
-            songs.Add(new Song("Memories.", SongCategory.Cinematic));
+            songs.Add(new Song("Memories", SongCategory.Cinematic));
             songs.Add(new Song("Once Again", SongCategory.Cinematic));
             songs.Add(new Song("Piano Moment", SongCategory.Cinematic));
             songs.Add(new Song("Sad Day", SongCategory.Cinematic));
