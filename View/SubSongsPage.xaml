@@ -9,15 +9,20 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        <Grid Margin="20,20,0,0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="143*"/>
+            <RowDefinition Height="144*"/>
+            <RowDefinition Height="714*"/>
+        </Grid.RowDefinitions>
+        <Grid Margin="20,20,0,0" Grid.RowSpan="3">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto" 
-                           MinHeight="110"/>
+                           MinHeight="250"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
 
             <MediaElement Name="MyMediaElement" AutoPlay="True"/>
-            <Grid>
+            <Grid Background="WhiteSmoke">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="100"/>
@@ -26,27 +31,28 @@
                    FontSize="40" 
                    FontWeight="Thin"                             
                    Margin="10,0,0,0" 
-                   VerticalAlignment="Top" 
+                   VerticalAlignment="Bottom" 
                    Height="60"/>
-                <StackPanel Orientation="Horizontal">
-                    <TextBlock Name="CategoryTextBlock2" Text="Song" FontSize="15" Margin="70,80,0,0" Width="200" VerticalAlignment="Center" FontWeight="SemiBold"/>
-                    <TextBlock Name="CategoryTextBlock3" Text="Genre" FontSize="15" Margin="20,80,0,0" Width="200" VerticalAlignment="Center" FontWeight="SemiBold"/>
+                <StackPanel Orientation="Horizontal" Background="WhiteSmoke" >
+                    <TextBlock Name="CategoryTextBlock2" Text="Song" FontSize="15" Margin="70,90,0,0" Width="200" VerticalAlignment="Bottom" FontWeight="SemiBold"/>
+                    <TextBlock Name="CategoryTextBlock3" Text="Genre" FontSize="15" Margin="20,80,0,0" Width="200" VerticalAlignment="Bottom" FontWeight="SemiBold"/>
                 </StackPanel>
+
                 <Image Name="imagebox" Stretch="Fill" VerticalAlignment="Top" HorizontalAlignment="Left" Height="150" Width="150"  />
 
                 <Button Grid.Column="0" Name="UploadFile"
                                                 Margin="36,163,0,0"
                                                 Content="Upload File"
-                                                Click="UploadFile_Click"
+                                                Click="Upload_Click"
                                                 Width="90"
                                                 Height="44" VerticalAlignment="Top"
                                                 />
 
-                <Button Grid.Column="1" x:Name="DeletePlayList"
+                <Button x:Name="DeletePlayList"
                     Content="Delete"
                     Click="DeletePlayList_Click"
-                    Width="88"
-                    Height="44"
+                    Width="90"
+                    Height="44" RenderTransformOrigin="0.523,2.045" Margin="1340,158,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2"
                     />
             </Grid>
 
@@ -54,7 +60,7 @@
                         Name="SoundListView"
                         SelectionMode="Single"
                         IsItemClickEnabled="True"
-                        ItemsSource="{x:Bind playlist.SongList}" 
+                        ItemsSource="{x:Bind playlist.SongList}"
                         ItemClick="SoundListView_ItemClick"
                         SelectedItem= "{Binding SelectedItem}" SelectedValuePath="Name" 
                         HorizontalAlignment="Left"  >

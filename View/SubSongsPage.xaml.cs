@@ -93,7 +93,7 @@ namespace MyMusicLibrary.View
             this.Frame.GoBack();
         }
 
-        private async void UploadFile_Click(object sender, RoutedEventArgs e)
+        private async void Upload_Click(object sender, RoutedEventArgs e)
         {
             // Set up the file picker.
             Windows.Storage.Pickers.FileOpenPicker openPicker =

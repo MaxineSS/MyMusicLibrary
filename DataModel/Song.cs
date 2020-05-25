@@ -15,7 +15,7 @@ namespace MyMusicLibrary.DataModel
         Jazz,
         Others,
         Relax,
-        Upbeat,
+        
     }
 
     public class Song
